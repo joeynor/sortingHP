@@ -3,7 +3,7 @@
 You are required to create a C++ program that interactively accepts and stores the information of used handphones for sale as shown in the table below. 
 
 ```
-Model		Make	Price	Condition
+Make		Model	Price	Condition
 ------		-----	---	--------
 Samsung		S2	500	B
 Apple		Iphone5	580	B

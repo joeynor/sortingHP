@@ -19,6 +19,6 @@ Using the data type declared in your program:
 3. Write a function call displayInfo(), to display the information keyed in.
 
 # Example Code
-The sample code is given in a file called [phones.cpp](phones.cpp).
+The sample code is given in a file called [handphone.cpp](handphone.cpp).
 There is a logical errors with the code, which makes the sorting work incorrectly, figure it out. 
 

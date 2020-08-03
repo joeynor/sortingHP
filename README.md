@@ -11,7 +11,7 @@ Apple		Iphone6	1200	A
 Samsung		Note10	4000	A
 ```
 
-Declare an array of 5 structures named Handphones in your program. 
+Declare an array of 4 structures named Handphones in your program. 
 Using the data type declared in your program:
 
 1. Write a function named storeInfo() that passes as an argument, an array of structure to capture the information of each car entered by the user. 

@@ -46,7 +46,7 @@ void sortInfo(int nphones, Phones info[])
 {
  //find the logical error here
   Phones temp;
-  cout << "Model\t\tMake\tPrice\tCondition\n" ;
+  cout << "Make\t\tModel\tPrice\tCondition\n" ;
   cout << "------\t\t-----\t---\t--------\n" ;
   for (int i = 0; i < nphones-1; i++)
     {

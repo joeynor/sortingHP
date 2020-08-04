@@ -16,10 +16,11 @@ void displayInfo(int, Phones []);
 
 int main()
 {
-  Phones myphone[8] = {};
   int numphones;
   cout << "Please enter number of phones for sale: " ;
   cin >> numphones;
+
+  Phones myphone[numphones] = {};
   storeInfo(numphones,myphone);
   sortInfo(numphones,myphone);
   displayInfo(numphones,myphone);
@@ -28,13 +29,13 @@ int main()
 
 void storeInfo(int nphones, Phones rec[])
 {
-  cout << nphones;
+  /*cout << nphones;*/
   for (int i = 0; i < nphones; i++) {
-    cout << "Please enter Phone Manufacturer: " ;
+    cout << endl << "Please enter Phone Manufacturer: " ;
     cin >> (rec+i)->make;
     cout << "Please enter Phone Model: " ;
     cin >> (rec+i)->model;
-    cout << "Please enter price of car: " ;
+    cout << "Please enter price of Phone: " ;
     cin >> (rec+i)->price;
     cout << "Please enter Condition Grade A,B or C: " ;
     cin >> (rec+i)->condition;    
@@ -44,18 +45,17 @@ void storeInfo(int nphones, Phones rec[])
 
 void sortInfo(int nphones, Phones info[])
 {
- //find the logical error here
   Phones temp;
   cout << "Make\t\tModel\tPrice\tCondition\n" ;
   cout << "------\t\t-----\t---\t--------\n" ;
-  for (int i = 0; i < nphones-1; i++)
+  for (int i = 0; i<nphones-1; i++)
     {
-      for(int j=0; j <(nphones-i-1);j++)
+      for(int j = i+1; j<nphones; j++)
         {
-          if((info+j)->price>(info+i+1)->price){
+          if((info+j) -> price<(info+i) -> price) {
             temp = *(info+j);
-            *(info+j) = *(info+j+1);
-            *(info+j+1) = temp;
+		    *(info+j) = *(info+i);
+		    *(info+i) = temp;
           }
         }
     }

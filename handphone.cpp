@@ -1,28 +1,29 @@
+//C++ program that interactively accepts and stores the information of used handphones for sale
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-struct Phones
+struct Phones   //structure of Phone 
 {
   string make, model;
   int price;
   char condition;
 };
 
-void storeInfo(int, Phones []);
-void sortInfo(int, Phones []);
-void displayInfo(int, Phones []);
+void storeInfo(int, Phones []);      //prototype deceleration
+void sortInfo(int, Phones []);       //prototype deceleration
+void displayInfo(int, Phones []);    //prototype deceleration
 
-int main()
+int main()                           // main Function
 {
   Phones myphone[8] = {};
   int numphones;
   cout << "Please enter number of phones for sale: " ;
   cin >> numphones;
-  storeInfo(numphones,myphone);
-  sortInfo(numphones,myphone);
-  displayInfo(numphones,myphone);
+  storeInfo(numphones,myphone);     // calling storeinfo function that store information
+  sortInfo(numphones,myphone);      // calling sortinfo function that sort information
+  displayInfo(numphones,myphone);   // calling  displayinfo function that print information
   return 0;
 }
 
